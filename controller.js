@@ -1,4 +1,6 @@
-const blogs = require('./models/blog_model.js');
+const mongoose = require('mongoose');
+require('./models/blog_model');
+const blogs = mongoose.model('Blogs');
 /* blogs->Db Schema
    Blog-> an object of blogs
 */

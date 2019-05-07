@@ -1,18 +1,18 @@
 module.exports = (app) => {
-    const blog = require('./controller.js');
+    const Blogs = require('./controller.js');
 
     // Create a new blog
-    app.post('/blog', blog.create);
+    app.post('/Blogs', Blogs.create);
 
     // Retrieve all blogs
-    app.get('/blog', blog.findAll);
+    app.get('/Blogs', Blogs.findAll);
 
     // Retrieve a single blog with blogId
-    app.get('/blog/:blogId', blog.findOne);
+    app.get('/Blogs/:blogId', Blogs.findOne);
 
     // Update a Note with blogId
-    app.put('/blog/:blogId', blog.update);
+    app.put('/Blogs/:blogId', Blogs.update);
 
     // Delete a Note with blogId
-    app.delete('/blog/:blogId', blog.delete);
+    app.delete('/Blogs/:blogId', Blogs.delete);
 }
